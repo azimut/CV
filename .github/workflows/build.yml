@@ -11,6 +11,6 @@ jobs:
       - name: Build Resume
         uses: xu-cheng/latex-action@v2
         with:
-          pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install titlesec"
+          pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install geometry hyperref titlesec titling fontawesome lastpage fancyhdr"
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
           root_file: CV.tex
