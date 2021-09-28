@@ -11,4 +11,5 @@ jobs:
       - name: Build Resume
         uses: xu-cheng/latex-action@v2
         with:
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
           root_file: CV.tex
