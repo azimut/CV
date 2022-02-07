@@ -154,12 +154,23 @@
 
 \subsubsection{\git{CV}{CV}}
 This CV, written in LaTeX, build and publish through Github Actions
-\subsubsection{\git{gantoo}{gantoo}}
-A Gentoo Linux Docker container build with Github Actions and deployed to DockerHub. Using musl and oriented to static linking
-\subsubsection{\git{overlay}{overlay}}
-A Gentoo Linux overlay, where I wrote build and installation scripts for software not available by default
-\subsubsection{\git{kubler-dock}{kubler-dock}}
-Contributor. Using Gentoo's USE feature and docker containers in order to obtain bare minimal docker images.
+
+\subsection{Common Lisp}
+\begin{itemize}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 1pt}
+  \item[--] Build \git{several}{shiny} \git{game}{incandescent} \git{engines}{scenic}, based on OpenGL
+  \item[--] Wrote wrappers for \git{multiple}{cl-gme} \git{3rd}{espeak-ng} \git{party}{aubio} \git{C}{cloud} libraries
+  \item[--] Created multiple \git{audio}{meniere}, \git{video}{viseq} and \git{midi}{launchpad-csound} sequencers
+\end{itemize}
+
+\subsection{Gentoo Linux}
+\begin{itemize}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 1pt}
+  \item[--] A Portage \git{overlay}{overlay} repository, to build software within Gentoo systems.
+  \item[--] \git{Minimal}{kubler-dock} and target \git{specific}{gantoo} Docker images, using different libc's and Github Actions to build.
+\end{itemize}
 
 \subsection{Golang}
 \begin{itemize}
@@ -169,18 +180,10 @@ Contributor. Using Gentoo's USE feature and docker containers in order to obtain
   \item[--] Projects to see user comments from
     \git{imageboards}{lainviewer}/
     \git{reddit}{redditviewer}/
-    \git{twitter}{cli-view}/
+    \git{hackernews}{cli-view}/
     \git{twitter}{cli-view} on the command line.
   \item[--] \git{Project}{sunny} to gather metadata from an IP address, asking different cloud providers.
 \end{itemize}
-
-\subsection{Erlang}
-\subsubsection{\git{snitch}{snitch}}
-Monitors public DNS record changes.
-
-\subsection{Rust}
-\subsubsection{\git{ccache}{ccache}}
-Saves the compressed output of a command on disk, if it fails, returns the saved output.
 
 \subsection{Bash}
 \subsubsection{\git{autoaim}{autoaim}}
@@ -188,21 +191,16 @@ Integrate several OSINT tools for automatic recon. Postgresql backed.
 \subsubsection{\git{daily-pic}{daily-pic}}
 HTML scrapper. Downloads wallpapers from >10 different sites.
 
-\subsection{Lisp}
-\subsubsection{\git{launchpad-csound}{launchpad-csound}}
-MIDI instrument and sequencer for Novation Launchpad.
-\subsubsection{\git{rocketman}{rocketman}}
-Client implementation of the TCP based protocol for Rocket Tracker.
-\subsubsection{\git{incandescent}{incandescent}}
-3d game engine. Using OpenGL and GLSL for graphics and post-processing effects. OpenAL for positional audio. Open Dynamics Engine for physics. And Common Lisp Object System (CLOS) for game logic.
-\subsubsection{\git{shiny}{shiny}}
-Project for on the fly audio and video sequencing (Livecoding). Using different C projects through CFFI calls. Fluidsynth, Supercollider and Csound for music synthesis. And OpenCV and OpenGL for video and shader based animations.
-\subsubsection{\git{scenic}{scenic}}
-Forward rendering toolkit with support for multiple lights and scenes.
+\subsection{Erlang}
+\subsubsection{\git{snitch}{snitch}}
+Monitors public DNS record changes.
 
 \subsection{C}
 \subsubsection{\git{sleeper}{sleeper}}
 Small program using `upower` and `x11` libs to log state changes into systemd.
 
+\subsection{Rust}
+\subsubsection{\git{ccache}{ccache}}
+Saves the compressed output of a command on disk, if it fails, returns the saved output.
 
 \end{document}
