@@ -56,6 +56,8 @@
 {0em} % between
 {.5em} % after
 
+\newcommand{\git}[2]{\href {https://github.com/azimut/{#2}} {#1}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -150,55 +152,56 @@
 
 \section{Personal Projects}
 
-\subsubsection{\href {https://github.com/azimut/CV} {CV}}
+\subsubsection{\git{CV}{CV}}
 This CV, written in LaTeX, build and publish through Github Actions
-\subsubsection{\href {https://github.com/azimut/gantoo} {gantoo}}
+\subsubsection{\git{gantoo}{gantoo}}
 A Gentoo Linux Docker container build with Github Actions and deployed to DockerHub. Using musl and oriented to static linking
-\subsubsection{\href {https://github.com/azimut/overlay} {overlay}}
+\subsubsection{\git{overlay}{overlay}}
 A Gentoo Linux overlay, where I wrote build and installation scripts for software not available by default
+\subsubsection{\git{kubler-dock}{kubler-dock}}
+Contributor. Using Gentoo's USE feature and docker containers in order to obtain bare minimal docker images.
 
 \subsection{Golang}
-\subsubsection{\href {https://github.com/azimut/lainviewer} {lainviewer}}
-Json parser and terminal view of forum messages.
-\subsubsection{\href {https://github.com/azimut/redditviewer} {redditviewer}}
-Json parser and terminal view of forum messages.
-\subsubsection{\href {https://github.com/azimut/github-rss} {github-rss}}
-Using github golang api library to generate RSS feeds.
-\subsubsection{\href {https://github.com/azimut/4chan-rss} {4chan-rss}}
-Using 4chan golang api library to generate RSS feeds.
-\subsubsection{\href {https://github.com/azimut/sunny} {sunny}}
-Queries different cloud providers for ranges of IPs they operate and determine if the provided IPs are hosted on them.
+\begin{itemize}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 1pt}
+  \item[--] Projects to generate RSS feeds, from \git{twitch}{twitch-rss} and \git{github}{github-rss} using their official API libraries.
+  \item[--] Projects to see user comments from
+    \git{imageboards}{lainviewer}/
+    \git{reddit}{redditviewer}/
+    \git{twitter}{cli-view}/
+    \git{twitter}{cli-view} on the command line.
+  \item[--] \git{Project}{sunny} to gather metadata from an IP address, asking different cloud providers.
+\end{itemize}
 
 \subsection{Erlang}
-\subsubsection{\href {https://github.com/azimut/snitch} {snitch}}
+\subsubsection{\git{snitch}{snitch}}
 Monitors public DNS record changes.
 
 \subsection{Rust}
-\subsubsection{\href {https://github.com/azimut/ccache} {ccache}}
+\subsubsection{\git{ccache}{ccache}}
 Saves the compressed output of a command on disk, if it fails, returns the saved output.
 
 \subsection{Bash}
-\subsubsection{\href {https://github.com/azimut/autoaim} {autoaim}}
+\subsubsection{\git{autoaim}{autoaim}}
 Integrate several OSINT tools for automatic recon. Postgresql backed.
-\subsubsection{\href {https://github.com/azimut/daily-pic} {daily-pic}}
+\subsubsection{\git{daily-pic}{daily-pic}}
 HTML scrapper. Downloads wallpapers from >10 different sites.
-\subsubsection{\href {https://github.com/azimut/kubler-dock} {kubler-dock}}
-Contributor. Using Gentoo's USE feature and docker containers in order to obtain bare minimal docker images.
 
 \subsection{Lisp}
-\subsubsection{\href {https://github.com/azimut/launchpad-csound} {launchpad-csound}}
+\subsubsection{\git{launchpad-csound}{launchpad-csound}}
 MIDI instrument and sequencer for Novation Launchpad.
-\subsubsection{\href {https://github.com/azimut/rocketman} {rocketman}}
+\subsubsection{\git{rocketman}{rocketman}}
 Client implementation of the TCP based protocol for Rocket Tracker.
-\subsubsection{\href {https://github.com/azimut/incandescent} {incandescent}}
+\subsubsection{\git{incandescent}{incandescent}}
 3d game engine. Using OpenGL and GLSL for graphics and post-processing effects. OpenAL for positional audio. Open Dynamics Engine for physics. And Common Lisp Object System (CLOS) for game logic.
-\subsubsection{\href {https://github.com/azimut/shiny} {shiny}}
+\subsubsection{\git{shiny}{shiny}}
 Project for on the fly audio and video sequencing (Livecoding). Using different C projects through CFFI calls. Fluidsynth, Supercollider and Csound for music synthesis. And OpenCV and OpenGL for video and shader based animations.
-\subsubsection{\href {https://github.com/azimut/scenic} {scenic}}
+\subsubsection{\git{scenic}{scenic}}
 Forward rendering toolkit with support for multiple lights and scenes.
 
 \subsection{C}
-\subsubsection{\href {https://github.com/azimut/sleeper} {sleeper}}
+\subsubsection{\git{sleeper}{sleeper}}
 Small program using `upower` and `x11` libs to log state changes into systemd.
 
 
