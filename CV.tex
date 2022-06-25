@@ -10,13 +10,34 @@
 }
 \urlstyle{same}
 
+\usepackage{randtext}
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{fontawesome}
+
+\usepackage{xparse}
+\ExplSyntaxOn
+\NewDocumentCommand{\getenv}{om}
+ {
+  \sys_get_shell:nnN { kpsewhich ~ --var-value ~ #2 } { } \l_tmpa_tl
+  \tl_trim_spaces:N \l_tmpa_tl
+  \IfNoValueTF { #1 }
+   {
+    \tl_use:N \l_tmpa_tl
+   }
+   {
+    \tl_set_eq:NN #1 \l_tmpa_tl
+   }
+ }
+\ExplSyntaxOff
+
+\getenv[\MAILTO]{MAILTO}
+\getenv[\FULLNAME]{FULLNAME}
+
 \renewcommand{\maketitle}{
   \begin{center}{\huge\bfseries\theauthor} \\
     \vspace{.25em}
-    {\faEnvelope} \href {mailto:azimut.github@protonmail.com} {azimut.github@protonmail.com}
+    {\faEnvelope} \href {mailto:\MAILTO} {\expandafter\randomize\expandafter{\MAILTO}}
     ---
     {\faGithub} \href {https://github.com/azimut} {azimut} \\
     \vspace{.25em}
@@ -61,8 +82,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+
 \title{R\'esum\'e}
-\author{\char'116 \char'151 \char'143 \char'157 \char'154 á\char'163 \kern .8em \char'115 \char'141 \char'162 \char'147 \char'165 \char'147 \char'154 \char'151 \char'157}
+\author{\FULLNAME}
 
 \maketitle
 

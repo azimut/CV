@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: xu-cheng/latex-action@v2
         with:
-          pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install geometry hyperref titlesec titling fontawesome lastpage fancyhdr"
+          pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install geometry hyperref titlesec titling fontawesome lastpage fancyhdr randtext"
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
           root_file: CV.tex
 
