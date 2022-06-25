@@ -6,6 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: xu-cheng/latex-action@v2
+        env:
+          MAILTO: ${{ secrets.MAILTO }}
+          FULLNAME: ${{ secrets.FULLNAME }}
         with:
           pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install geometry hyperref titlesec titling fontawesome lastpage fancyhdr randtext"
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
