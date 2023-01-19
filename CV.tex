@@ -15,8 +15,12 @@
 \usepackage{titling}
 \usepackage{fontawesome}
 \usepackage{xparse}
-\usepackage{enumitem}
 
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{multirow}
 \ExplSyntaxOn
 \NewDocumentCommand{\getenv}{om}
  {
@@ -81,9 +85,14 @@
 \newcommand{\git}[2]{\href {https://github.com/azimut/#2} {#1}}
 
 \newlist{projects}{enumerate}{1}
-\setlist[projects,1]{label = -}
+\setlist[projects,1]{label = .}
 \setlist{noitemsep}
 \newcommand{\project}{\item}
+
+\newcommand{\tablistcommand}{% <-- for eliminating vertical space
+                             %     before and after itemize
+            \leavevmode\par\vspace{-\baselineskip}
+                            }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -186,53 +195,45 @@ I spend most of my professional carrer maintaining and desigining high-scalable 
 
 \section{Personal Projects}
 
-\subsubsection{\git{CV}{CV}}
-This CV, written in LaTeX, build and published through Github Actions
 
-\subsection{React}
-\begin{projects}
-\project Golang + Typescript {\git{app}{rounded}} to search through IRC logs, reading them from a postgres database.
-\project Typescript {\git{app}{reddit-gallery}} to generate an image and video gallery from a Reddit page.
-\end{projects}
-
-\subsection{Common Lisp}
-\begin{projects}
-  \project Several game \git{engines}{scenic} based on OpenGL
-  \project Wrappers for \git{multiple}{cl-gme} \git{3rd}{espeak-ng} \git{party}{aubio} \git{C}{cloud} libraries
-  \project Multiple \git{audio}{meniere}, \git{video}{viseq} and \git{midi}{launchpad-csound} sequencers
-\end{projects}
-
-\subsection{Gentoo Linux}
-\begin{projects}
-\project A Portage \git{repository}{overlay}, to build 3rd party software.
-\project \git{Minimal}{kubler-dock} and target \git{specific}{gantoo} Docker images, using different libc's and Github Actions to build.
-\end{projects}
-
-\subsection{Golang}
-\begin{projects}
-  \project RSS feed generators, for \git{twitch}{twitch-rss} and \git{github}{github-rss}.
-  \project Command line clients to view comments on
-    \git{imageboards}{lainviewer},
-    \git{reddit}{redditviewer},
-    \git{hackernews}{cli-view},
-    \git{twitter}{cli-view}.
-  \project IP address \git{metadata}{sunny} gatherer, asking different cloud providers ans WHOIS.
-\end{projects}
-
-\subsection{Bash}
-\begin{projects}
-\project Integrate several OSINT {\git{tools}{autoaim}} for automatic recon. Postgresql backed.
-\project HTML {\git{scrapper}{daily-pic}}. Downloads wallpapers from 10 different sites.
-\end{projects}
-
-\subsection{Erlang}
-\begin{projects}
-\project Public DNS record {\git{monitor}{snitch}}.
-\end{projects}
-
-\subsection{C}
-\begin{projects}
-\project System {\git{monitor}{sleeper}} using `upower`, `x11`, and `postgres` libraries to record system state.
-\end{projects}
+\begin{center}
+  \begin{tabular}{ c | p{0.9\textwidth}}
+    \multirowcell{4}{React} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[--] Golang + Typescript {\git{app}{rounded}} to search through IRC logs, stored in postgres.
+    \item[--] Typescript {\git{app}{reddit-gallery}} to generate an image and video gallery from a Reddit page.
+    \end{itemize} \\ \hline
+    \multirowcell{5}{Lisp} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[--] Several game \git{engines}{scenic} based on OpenGL
+    \item[--] Wrappers for \git{multiple}{cl-gme} \git{3rd}{espeak-ng} \git{party}{aubio} \git{C}{cloud} libraries
+    \item[--] Multiple \git{audio}{meniere}, \git{video}{viseq} and \git{midi}{launchpad-csound} sequencers
+    \end{itemize} \\ \hline
+    \multirowcell{4}{Gentoo} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[--] A Portage \git{repository}{overlay}, to build 3rd party software.
+    \item[--] \git{Minimal}{kubler-dock} and target \git{specific}{gantoo} Docker images, using different libc's and Github Actions to build.
+    \end{itemize} \\ \hline
+    \multirowcell{4}{Bash} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[--] Integrate several OSINT {\git{tools}{autoaim}} for automatic recon. Postgresql backed.
+    \item[--] HTML {\git{scrapper}{daily-pic}}. Downloads wallpapers from 10 different sites.
+    \end{itemize} \\ \hline
+    \multirowcell{5}{Golang} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[--] RSS feed generators, for \git{twitch}{twitch-rss} and \git{github}{github-rss}.
+    \item[--] Command line clients to view comments on
+      \git{imageboards}{lainviewer},
+      \git{reddit}{redditviewer},
+      \git{hackernews}{cli-view},
+      \git{twitter}{cli-view}.
+    \item[--] IP address \git{metadata}{sunny} gatherer, asking different cloud providers ans WHOIS.
+    \end{itemize} \\ \hline
+    \multirowcell{3}{Erlang} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[--] Public DNS record {\git{monitor}{snitch}}.
+    \end{itemize} \\ \hline
+    \multirowcell{3}{C} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[--] System {\git{monitor}{sleeper}} using `upower`, `x11`, and `postgres` libraries to record system state.
+    \end{itemize} \\ \hline
+    \multirowcell{3}{Latex} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[--] This CV, written in LaTeX, build and published through Github Actions.
+    \end{itemize}
+  \end{tabular}
+\end{center}
 
 \end{document}
