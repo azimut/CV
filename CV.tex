@@ -15,6 +15,7 @@
 \usepackage{titling}
 \usepackage{fontawesome}
 \usepackage{xparse}
+\usepackage{enumitem}
 
 \ExplSyntaxOn
 \NewDocumentCommand{\getenv}{om}
@@ -78,6 +79,11 @@
 {.5em} % after
 
 \newcommand{\git}[2]{\href {https://github.com/azimut/#2} {#1}}
+
+\newlist{projects}{enumerate}{1}
+\setlist[projects,1]{label = -}
+\setlist{noitemsep}
+\newcommand{\project}{\item}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -184,63 +190,49 @@ I spend most of my professional carrer maintaining and desigining high-scalable 
 This CV, written in LaTeX, build and published through Github Actions
 
 \subsection{React}
-\begin{itemize}
-  \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt plus 1pt}
-\item[-] Golang + Typescript {\git{app}{rounded}} to search through IRC logs, reading them from a postgres database.
-\item[-] Typescript {\git{app}{reddit-gallery}} to generate an image and video gallery from a Reddit page.
-\end{itemize}
+\begin{projects}
+\project Golang + Typescript {\git{app}{rounded}} to search through IRC logs, reading them from a postgres database.
+\project Typescript {\git{app}{reddit-gallery}} to generate an image and video gallery from a Reddit page.
+\end{projects}
 
 \subsection{Common Lisp}
-\begin{itemize}
-  \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt plus 1pt}
-  \item[--] Several game \git{engines}{scenic} based on OpenGL
-  \item[--] Wrappers for \git{multiple}{cl-gme} \git{3rd}{espeak-ng} \git{party}{aubio} \git{C}{cloud} libraries
-  \item[--] Multiple \git{audio}{meniere}, \git{video}{viseq} and \git{midi}{launchpad-csound} sequencers
-\end{itemize}
+\begin{projects}
+  \project Several game \git{engines}{scenic} based on OpenGL
+  \project Wrappers for \git{multiple}{cl-gme} \git{3rd}{espeak-ng} \git{party}{aubio} \git{C}{cloud} libraries
+  \project Multiple \git{audio}{meniere}, \git{video}{viseq} and \git{midi}{launchpad-csound} sequencers
+\end{projects}
 
 \subsection{Gentoo Linux}
-\begin{itemize}
-  \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt plus 1pt}
-  \item[--] A Portage \git{repository}{overlay}, to build 3rd party software.
-  \item[--] \git{Minimal}{kubler-dock} and target \git{specific}{gantoo} Docker images, using different libc's and Github Actions to build.
-\end{itemize}
+\begin{projects}
+\project A Portage \git{repository}{overlay}, to build 3rd party software.
+\project \git{Minimal}{kubler-dock} and target \git{specific}{gantoo} Docker images, using different libc's and Github Actions to build.
+\end{projects}
 
 \subsection{Golang}
-\begin{itemize}
-  \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt plus 1pt}
-  \item[--] RSS feed generators, for \git{twitch}{twitch-rss} and \git{github}{github-rss}.
-  \item[--] Command line clients to view comments on
+\begin{projects}
+  \project RSS feed generators, for \git{twitch}{twitch-rss} and \git{github}{github-rss}.
+  \project Command line clients to view comments on
     \git{imageboards}{lainviewer},
     \git{reddit}{redditviewer},
     \git{hackernews}{cli-view},
     \git{twitter}{cli-view}.
-  \item[--] IP address \git{metadata}{sunny} gatherer, asking different cloud providers ans WHOIS.
-\end{itemize}
+  \project IP address \git{metadata}{sunny} gatherer, asking different cloud providers ans WHOIS.
+\end{projects}
 
 \subsection{Bash}
-\begin{itemize}
-  \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt plus 1pt}
-\item[-] Integrate several OSINT {\git{tools}{autoaim}} for automatic recon. Postgresql backed.
-\item[-] HTML {\git{scrapper}{daily-pic}}. Downloads wallpapers from 10 different sites.
-\end{itemize}
+\begin{projects}
+\project Integrate several OSINT {\git{tools}{autoaim}} for automatic recon. Postgresql backed.
+\project HTML {\git{scrapper}{daily-pic}}. Downloads wallpapers from 10 different sites.
+\end{projects}
 
 \subsection{Erlang}
-\begin{itemize}
-  \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt plus 1pt}
-\item[-] Public DNS record {\git{monitor}{snitch}}.
-\end{itemize}
+\begin{projects}
+\project Public DNS record {\git{monitor}{snitch}}.
+\end{projects}
 
 \subsection{C}
-\begin{itemize}
-  \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt plus 1pt}
-\item[-] System {\git{monitor}{sleeper}} using `upower`, `x11`, and `postgres` libraries to record system state changes.
-\end{itemize}
+\begin{projects}
+\project System {\git{monitor}{sleeper}} using `upower`, `x11`, and `postgres` libraries to record system state.
+\end{projects}
 
 \end{document}
