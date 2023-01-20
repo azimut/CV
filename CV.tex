@@ -16,6 +16,9 @@
 \usepackage{fontawesome}
 \usepackage{xparse}
 
+\usepackage{xcolor}
+\usepackage{colortbl}
+
 \usepackage{makecell}
 \usepackage{tabularx}
 \usepackage{enumitem}
@@ -116,7 +119,7 @@ I spend most of my professional carrer maintaining and desigining high-scalable 
   \hspace{.1em} \textbf{Tools}   & emacs, git, tcpdump, nmap, docker, ansible \\
   \hspace{.1em} \textbf{Servers} & Apache, Nginx, Kubernetes, qemu, dnsmasq, qmail, postfix, dovecot \\
   \hspace{.1em} \textbf{DB}      & mysql, postgres, elasticsearch, redis, OpenLDAP \\
-  \hspace{.1em} \textbf{OS}      & Gentoo, Red Hat \\
+  \hspace{.1em} \textbf{OS}      & Gentoo, Red Hat
 \end{tabular}
 
 
@@ -126,7 +129,7 @@ I spend most of my professional carrer maintaining and desigining high-scalable 
 \begin{tabular}{@{}lll@{}}
   \hspace{.1em} \textbf{Advanced} & common lisp, bash \\
   \hspace{.1em} \textbf{Intermediate} & golang, sql \\
-  \hspace{.1em} \textbf{Previous Experience} & erlang, c, javascript, typescript, python, perl, php, glsl, clojure, rust, ocaml, lua \\
+  \hspace{.1em} \textbf{Previous Experience} & erlang, c, javascript, typescript, python, perl, php, glsl, clojure, rust, ocaml, lua
 \end{tabular}
 
 
@@ -136,7 +139,6 @@ I spend most of my professional carrer maintaining and desigining high-scalable 
 \begin{tabular}{@{}lll@{}}
   \hspace{.1em} Spanish & Native \\
   \hspace{.1em} English & Upper Intermediate
-  \\
 \end{tabular}
 
 
@@ -186,11 +188,13 @@ I spend most of my professional carrer maintaining and desigining high-scalable 
 \section{Education}
 
 
-\begin{tabular}{@{}lll@{}}
-  \hspace{.1em} Professional Penetration Tester & Base4 University & 2015 \\
-  \hspace{.1em} Red Hat System Administrator I  & IT Collage       & 2014 \\
-  \hspace{.1em} Systems Engineer                & UTN - Incomplete & 2010-2011\\
+\begin{center}
+\begin{tabular}{@{}r|p{0.6\textwidth}|l}
+  \hspace{.1em} 2015      & Professional Penetration Tester & {Base4} \\
+  \hspace{.1em} 2014      & Red Hat System Administrator I  & {IT Collage} \\
+  \hspace{.1em} 2010-2011 & Systems Engineering             & {UTN - Incomplete}
 \end{tabular}
+\end{center}
 
 
 \section{Personal Projects}
@@ -198,33 +202,28 @@ I spend most of my professional carrer maintaining and desigining high-scalable 
 
 \begin{center}
   \begin{tabular}{ p{0.2\textwidth} p{0.6\textwidth}}
-    \multirowcell{4}{\textbf{Typescript}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
-    \item[\textperiodcentered] \git{app}{rounded} to search through irc logs, stored in postgres
+    \multirowcell{3}{\textbf{Typescript}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
     \item[\textperiodcentered] reddit \git{image gallery}{reddit-gallery} in React
-    \end{itemize} \\ \hline
-    \multirowcell{4}{\textbf{Common Lisp}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
-    \item[\textperiodcentered] several \git{game engines}{scenic}
-    \item[\textperiodcentered] multiple \git{midi}{launchpad-csound} sequencers
-    \end{itemize} \\ \hline
-    \multirowcell{4}{\textbf{Gentoo}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
-    \item[\textperiodcentered] portage \git{repository}{overlay}, to build 3rd party software
+    \end{itemize} \\ \arrayrulecolor{gray}\hline
+    \multirowcell{3}{\textbf{Common Lisp}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[\textperiodcentered] several \git{game engines}{scenic} and \git{midi}{launchpad-csound} sequencers
+    \end{itemize} \\ \arrayrulecolor{gray}\hline
+    \multirowcell{3}{\textbf{Gentoo}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
     \item[\textperiodcentered] \git{minimal}{kubler-dock} \git{docker}{gantoo} images
-    \end{itemize} \\ \hline
-    \multirowcell{4}{\textbf{Bash}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
-    \item[\textperiodcentered] integrate several \git{tools}{autoaim} for automatic recon
-    \item[\textperiodcentered] html scrapper to download  \git{wallpapers}{daily-pic} from different sites
-    \end{itemize} \\ \hline
-    \multirowcell{5}{\textbf{Golang}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \end{itemize} \\ \arrayrulecolor{gray}\hline
+    \multirowcell{3}{\textbf{Bash}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
+    \item[\textperiodcentered] integrate several \git{security tools}{autoaim} for automated bug bounty work
+    \end{itemize} \\ \arrayrulecolor{gray}\hline
+    \multirowcell{4}{\textbf{Golang}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
     \item[\textperiodcentered] rss feed generators, from \git{twitch}{twitch-rss} and \git{github}{github-rss} api's
     \item[\textperiodcentered] command line clients to view \git{comments}{cli-view} of different sites
-    \item[\textperiodcentered] ip's \git{metadata}{sunny} gatherer, asking different cloud providers ans whois
-    \end{itemize} \\ \hline
+    \end{itemize} \\ \arrayrulecolor{gray}\hline
     \multirowcell{3}{\textbf{Erlang}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
     \item[\textperiodcentered] monitor of public \git{dns}{snitch} records
-    \end{itemize} \\ \hline
+    \end{itemize} \\ \arrayrulecolor{gray}\hline
     \multirowcell{3}{\textbf{C}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
     \item[\textperiodcentered] local system \git{monitor}{sleeper}
-    \end{itemize} \\ \hline
+    \end{itemize} \\ \arrayrulecolor{gray}\hline
     \multirowcell{3}{\textbf{Latex}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
     \item[\textperiodcentered] this \git{resume}{CV}, build and published through Github Actions
     \end{itemize}
