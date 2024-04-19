@@ -1,5 +1,6 @@
 MAILTO ?= noreply@example.com
 FULLNAME ?= ???, ??????
+LINKEDIN ?= nmarguglio
 
 .EXPORT_ALL_VARIABLES:
 

@@ -41,13 +41,14 @@
 
 \getenv[\MAILTO]{MAILTO}
 \getenv[\FULLNAME]{FULLNAME}
+\getenv[\LINKEDIN]{LINKEDIN}
 
 \renewcommand{\maketitle}{
   \begin{center}{\huge\bfseries\theauthor} \\
     \vspace{.25em}
     {\faEnvelope} \href {mailto:\MAILTO} {\expandafter\randomize\expandafter{\MAILTO}}
-    ---
-    {\faGithub} \href {https://github.com/azimut} {azimut} \\
+    {\faGithub} \href {https://github.com/azimut} {azimut}
+    {\faLinkedin} \href {https://www.linkedin.com/in/\LINKEDIN} {\LINKEDIN} \\
     \vspace{.25em}
     \today
   \end{center}
@@ -198,7 +199,7 @@ I spend most of my professional carrer maintaining and desigining high-scalable 
 
 
 \begin{center}
-  \begin{tabular}{ p{0.2\textwidth} p{0.6\textwidth}}
+  \begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
     \multirowcell{3}{\textbf{Common Lisp}} & \begin{itemize}[leftmargin=1em,noitemsep,topsep=0pt]
     \item[\textperiodcentered] several \git{game engines}{scenic} and \git{midi}{launchpad-csound} sequencers
     \end{itemize} \\ \arrayrulecolor{gray}\hline
