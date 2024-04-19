@@ -9,6 +9,7 @@ jobs:
         env:
           MAILTO: ${{ secrets.MAILTO }}
           FULLNAME: ${{ secrets.FULLNAME }}
+          LINKEDIN: ${{ secrets.LINKEDIN }}
         with:
           pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install geometry hyperref titlesec titling fontawesome lastpage fancyhdr randtext multirow makecell"
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
