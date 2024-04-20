@@ -10,6 +10,8 @@
 }
 \urlstyle{same}
 
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
 \usepackage{randtext}
 \usepackage{titlesec}
 \usepackage{titling}
@@ -110,28 +112,23 @@
 
 \section{{\Large{\faUser}} About Me}
 
-I spend most of my professional carrer maintaining and desigining high-scalable Linux systems. More recently, I have been learning how those systems are built from the programming side.
+I spend most of my professional carrer maintaining and desigining high-scalable Linux systems. More recently, I have been learning how those systems are built from the programming side. \\
 
-
-\section{{\Large{\faHammer}} Technical Skills}
-
-
-\begin{tabular}{@{}rll@{}}
-  \hspace{.1em} \textbf{programming} & common lisp, bash, go, awk, jq, elm \\
-  \hspace{.1em} \textbf{tools}       & emacs, git, docker, ansible, github actions \\
-  \hspace{.1em} \textbf{databases}   & sqlite, postgres \\
-  \hspace{.1em} \textbf{OSs}         & gentoo, red hat
-\end{tabular}
-
-
-\section{{\Large{\faLanguage}} Languages}
-
-
-\begin{tabular}{@{}rll@{}}
-  \hspace{.1em} \textbf{English} & Upper Intermediate \\
-  \hspace{.1em} \textbf{Spanish} & Native \\
-\end{tabular}
-
+\begin{multicols}{2}
+  \section{{\Large{\faHammer}} Technical Skills}
+  \begin{tabular}{@{}rll@{}}
+    \hspace{.1em} \textbf{languages} & common lisp, bash, go, awk, jq, elm \\
+    \hspace{.1em} \textbf{tools}     & emacs, git, docker, ansible, github actions \\
+    \hspace{.1em} \textbf{databases} & sqlite, postgres \\
+    \hspace{.1em} \textbf{OSs}       & gentoo, red hat
+  \end{tabular}
+  \columnbreak
+  \section{{\Large{\faLanguage}} Languages}
+  \begin{tabular}{@{}rll@{}}
+    \hspace{.1em} \textbf{English} & Upper Intermediate \\
+    \hspace{.1em} \textbf{Spanish} & Native \\
+  \end{tabular}
+\end{multicols}
 
 \section{{\Large{\faBriefcase}} Job Experience}
 
