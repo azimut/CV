@@ -47,17 +47,16 @@
 
 \renewcommand{\maketitle}{
   \begin{center}{\huge\bfseries\theauthor} \\
-    \vspace{.25em}
-    {\faEnvelope} \href {mailto:\MAILTO} {\expandafter\randomize\expandafter{\MAILTO}}
-    {\faGithub} \href {https://github.com/azimut} {azimut}
+    {\faEnvelope} \href {mailto:\MAILTO} {\expandafter\randomize\expandafter{\MAILTO}} $\cdot$
+    {\faGithub} \href {https://github.com/azimut} {azimut} $\cdot$
     {\faLinkedin} \href {https://www.linkedin.com/in/\LINKEDIN} {\LINKEDIN} \\
-    \vspace{.25em}
     \today
   \end{center}
 }
 
 \usepackage{lastpage}
 \usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
 \fancyhf{} % to clear existing header/footer if you don't want it
 \cfoot{Page \thepage \hspace{1pt} of \pageref*{LastPage}}
