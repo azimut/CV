@@ -19,9 +19,8 @@ jobs:
         env:
           FILENAME: ${{ secrets.FILENAME }}
         run: |
-          mkdir -p public/
-          echo "<html><body><script type='text/javascript'>window.location.href = ${FILENAME};</script></body></html>" > public/index.html
-          cp -v CV.pdf public/$FILENAME
+          sed -i 's/@@FILENAME@@/'"${FILENAME}"'/' public/index.html
+          cp -v CV.pdf public/${FILENAME}
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
