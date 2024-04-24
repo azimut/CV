@@ -89,21 +89,13 @@
 {0em} % between
 {.5em} % after
 
-\newcommand{\git}[2]{\href {https://github.com/azimut/#2} {#1}}
+\newcommand{\git}[1]{\href {https://github.com/azimut/#1} {\scriptsize{\faGithubSquare}}}
 \newcommand
-    {\pproject}
+    {\project}
     [3]
-    {\texttt{#1} & #3 \git{\scriptsize{\faLink}}{#2}\\}
+    {\texttt{#1} & #3 \git{#2}\\}
 
-\newlist{projects}{enumerate}{1}
-\setlist[projects,1]{label = .}
 \setlist{noitemsep}
-\newcommand{\project}{\item}
-
-\newcommand{\tablistcommand}{% <-- for eliminating vertical space
-                             %     before and after itemize
-            \leavevmode\par\vspace{-\baselineskip}
-                            }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -179,11 +171,11 @@ I spend most of my professional career maintaining and designing high-scalable L
 \hypersetup{urlcolor=gray}
 \begin{center}
   \begin{tabular}{c l}
-    \pproject{Common Lisp} {scenic}         {several game engines and midi sequencers}
-    \pproject{Golang}      {cli-view}       {command line clients to view comments of different websites}
-    \pproject{Elm}         {newspod}        {fully searchable database of tech podcasts}
-    \pproject{Erlang}      {snitch}         {monitor of public dns records}
-    \pproject{Typescript}  {reddit-gallery} {reddit image gallery made with React}
+    \project{Common Lisp} {scenic}         {several game engines and midi sequencers}
+    \project{Golang}      {cli-view}       {command line clients to view comments of different websites}
+    \project{Elm}         {newspod}        {fully searchable database of tech podcasts}
+    \project{Erlang}      {snitch}         {monitor of public dns records}
+    \project{Typescript}  {reddit-gallery} {reddit image gallery made with React}
   \end{tabular}
 \end{center}
 
