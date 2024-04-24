@@ -90,6 +90,10 @@
 {.5em} % after
 
 \newcommand{\git}[2]{\href {https://github.com/azimut/#2} {#1}}
+\newcommand
+    {\pproject}
+    [3]
+    {#1 & #3 \git{\scriptsize{\faLink}}{#2}\\}
 
 \newlist{projects}{enumerate}{1}
 \setlist[projects,1]{label = .}
@@ -171,14 +175,14 @@ I spend most of my professional career maintaining and designing high-scalable L
 
 \section{Personal Projects}
 
-
+\hypersetup{urlcolor=gray}
 \begin{center}
-  \begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
-    \textbf{Common Lisp} & several \git{game engines}{scenic} and \git{midi}{launchpad-csound} sequencers \\
-    \textbf{Golang}      & command line clients to view \git{comments}{cli-view} of different websites \\
-    \textbf{Elm}         & fully \git{searchable}{newspod} database of tech podcast episodes. Updated daily. \\
-    \textbf{Erlang}      & monitor of public \git{dns}{snitch} records \\
-    \textbf{Typescript}  & reddit \git{image gallery}{reddit-gallery} made with React \\
+  \begin{tabular}{c l}
+    \pproject{Common Lisp} {scenic}         {several game engines and midi sequencers}
+    \pproject{Golang}      {cli-view}       {command line clients to view comments of different websites}
+    \pproject{Elm}         {newspod}        {fully searchable database of tech podcasts}
+    \pproject{Erlang}      {snitch}         {monitor of public dns records}
+    \pproject{Typescript}  {reddit-gallery} {reddit image gallery made with React}
   \end{tabular}
 \end{center}
 
