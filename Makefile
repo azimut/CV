@@ -1,5 +1,5 @@
 MAILTO ?= noreply@example.com
-FULLNAME ?= ???, ??????
+FULLNAME ?= John Doe
 LINKEDIN ?= foobar
 
 .EXPORT_ALL_VARIABLES:
