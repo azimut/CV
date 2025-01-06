@@ -55,7 +55,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
 \fancyhf{} % to clear existing header/footer if you don't want it
-\cfoot{Page \thepage \hspace{1pt} of \pageref*{LastPage}}
+\cfoot{\iflanguage{spanish}{Página}{Page} \thepage \hspace{1pt} \iflanguage{spanish}{de}{of} \pageref*{LastPage}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
