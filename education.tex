@@ -1,6 +1,5 @@
 \newcommand
     {\makeeducation}
-    [4]
     {\begin{multicols}{2}
         \section{\iflanguage{spanish}{Educaci\'on}{Education}}
         \begin{tabular}{ r | p{0.2\textwidth} | l }
@@ -11,8 +10,8 @@
         \end{tabular}
         \columnbreak
         \section{{\iflanguage{spanish}{Idiomas}{Languages}}}
-        \begin{tabular}{ l l }
-          \hspace{.1em} \textbf{#1} & #2 \\
-          \hspace{.1em} \textbf{#3} & #4
+        \begin{tabular}{ c l }
+          \hspace{.1em} \iflanguage{spanish}{\textbf{Ingles}  & Intermedio}{\textbf{English} & Upper-Intermediate} \\
+          \hspace{.1em} \iflanguage{spanish}{\textbf{Español} & Nativo}    {\textbf{Spanish} & Native}
         \end{tabular}
     \end{multicols}}
