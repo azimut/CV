@@ -37,7 +37,7 @@
 \getenv[\FULLNAME]{FULLNAME}
 \getenv[\LINKEDIN]{LINKEDIN}
 
-\renewcommand{\maketitle}{
+\renewcommand{\maketitle}[1]{
   \begin{center}
     {\Huge\bfseries\theauthor} \\
     \vspace{.25em}
@@ -46,7 +46,7 @@
     \raisebox{-0.05\height}{\small{\faLinkedin}} \href {https://www.linkedin.com/in/\LINKEDIN} {\LINKEDIN} $\cdot$
     \raisebox{-0.05\height}{\small{\faHome}}     \href {https://azimut.github.io/} {personal site} \\
     \vspace{.25em}
-    \today
+    #1
   \end{center}
 }
 
