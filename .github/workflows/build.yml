@@ -13,14 +13,19 @@ jobs:
         with:
           pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install geometry hyperref titlesec titling fontawesome lastpage fancyhdr randtext multirow makecell"
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-          root_file: CV.tex
+          root_file: |
+            CV.tex
+            CV_es.tex
 
       - name: Move .pdf to public/
         env:
-          FILENAME: ${{ secrets.FILENAME }}
+          FILENAME_ENGLISH: ${{ secrets.FILENAME_ENGLISH }}
+          FILENAME_SPANISH: ${{ secrets.FILENAME_SPANISH }}
         run: |
-          sed -i 's/@@FILENAME@@/'"${FILENAME}"'/' public/index.html
-          cp -v CV.pdf public/${FILENAME}
+          sed -i 's/FILENAME_ENGLISH/'"${FILENAME_ENGLISH}"'/' public/index.html
+          sed -i 's/FILENAME_SPANISH/'"${FILENAME_SPANISH}"'/' public/index.html
+          cp -v CV.pdf    public/${FILENAME_ENGLISH}
+          cp -v CV_es.pdf public/${FILENAME_SPANISH}
 
       - uses: peaceiris/actions-gh-pages@v3
         with:

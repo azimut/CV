@@ -4,8 +4,13 @@ LINKEDIN ?= foobar
 
 .EXPORT_ALL_VARIABLES:
 
-CV.pdf: CV.tex
-	pdflatex --enable-pipes --shell-escape CV.tex
+.PHONY: all
+all: CV.pdf CV_es.pdf
+
+CV_es.pdf: CV_es.tex about.tex education.tex setup.tex
+	pdflatex --enable-pipes --shell-escape $<
+CV.pdf: CV.tex about.tex education.tex setup.tex
+	pdflatex --enable-pipes --shell-escape $<
 
 .PHONY: clean
-clean: ; rm -f CV.pdf
+clean: ; rm -vf *.pdf
