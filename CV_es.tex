@@ -1,5 +1,7 @@
 \documentclass[11pt]{article}
 
+\usepackage[spanish,english]{babel}
+
 \include{setup}
 \include{about}
 \include{education}
@@ -11,14 +13,14 @@
 
 \maketitle{\selectlanguage{spanish}\today}
 
-\makeabout
-    {Acerca de Mi}{Conocimientos Tecnicos}
-    {
-      Dedique mi carrera profesional a mantener sistemas Linux altamente escalables.
-      Mas recientemente, he estado aprendiendo como son esos sistemas construidos desde el lado programacional.
-    }
+\selectlanguage{spanish}{
+  \makeabout{
+    Dedique mi carrera profesional a mantener sistemas Linux altamente escalables.
+    Mas recientemente, he estado aprendiendo como son esos sistemas construidos desde el lado programacional.
+  }
+}
 
-\section{Job Experience}
+\section{Experiencia Laboral}
 
 
 \subsection{Email Hosting Software Engineer III --- Web.com \hfill 2017-2018}
@@ -48,10 +50,11 @@
 \end{itemize}
 
 
-\makeeducation
-    {Educacion}{Idiomas}
-    {Ingles}{Intermedio}
-    {Español}{Nativo}
+\selectlanguage{spanish}{
+  \makeeducation
+      {Ingles}{Intermedio}
+      {Español}{Nativo}
+}
 
 
 \section{Proyectos Personales}

@@ -1,18 +1,18 @@
 \newcommand
     {\makeeducation}
-    [6]
+    [4]
     {\begin{multicols}{2}
-        \section{#1}
+        \section{\iflanguage{spanish}{Educaci\'on}{Education}}
         \begin{tabular}{ r | p{0.2\textwidth} | l }
-          24    & Front-End JS        & BA "Aprende" \\
+          24    & Front-End JS        & BA Aprende \\
           15    & Penetration Tester  & Base4 \\
           14    & RHSA I              & IT Collage \\
           10/11 & Systems Engineering & UTN - Incomplete
         \end{tabular}
         \columnbreak
-        \section{#2}
+        \section{{\iflanguage{spanish}{Idiomas}{Languages}}}
         \begin{tabular}{ l l }
-          \hspace{.1em} \textbf{#3} & #4 \\
-          \hspace{.1em} \textbf{#5} & #6
+          \hspace{.1em} \textbf{#1} & #2 \\
+          \hspace{.1em} \textbf{#3} & #4
         \end{tabular}
     \end{multicols}}
