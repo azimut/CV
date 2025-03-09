@@ -1,15 +1,15 @@
 \usepackage[
-  left=.5in,
-  right=.5in,
-  top=.35in,
-  bottom=.5in
+  left   = 0.5in,
+  right  = 0.5in,
+  top    = 0.35in,
+  bottom = 0.5in
 ]{geometry}
 
 \usepackage{hyperref}
 \hypersetup{
-  colorlinks=true,
-  linkcolor=blue,
-  urlcolor=blue
+  colorlinks = true,
+  linkcolor  = blue,
+  urlcolor   = blue
 }
 \urlstyle{same}
 
@@ -49,7 +49,7 @@
  {\par\noindent\ignorespacesafterend}
 
 \renewcommand{\maketitle}[1]{
-\begin{nscenter}
+  \begin{nscenter}
     \begin{tabular}{ r | c | r }
       \qrcode{https://azimut.github.io/CV/}
       &
@@ -65,8 +65,8 @@
         \raisebox{-0.05\height}{\small{\faHome}}     \href {https://azimut.github.io/} {personal site}
       \end{tabular}
     \end{tabular}
-  \vspace{.25in}
-\end{nscenter}
+    \vspace{.25in}
+  \end{nscenter}
 }
 
 \usepackage{lastpage}
