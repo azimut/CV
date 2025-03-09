@@ -1,4 +1,9 @@
-\usepackage[margin=.5in]{geometry}
+\usepackage[
+  left=.5in,
+  right=.5in,
+  top=.35in,
+  bottom=.5in
+]{geometry}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -39,8 +44,12 @@
 \getenv[\FULLNAME]{FULLNAME}
 \getenv[\LINKEDIN]{LINKEDIN}
 
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
 \renewcommand{\maketitle}[1]{
-\begin{center}
+\begin{nscenter}
     \begin{tabular}{ r | c | r }
       \qrcode{https://azimut.github.io/CV/}
       &
@@ -56,8 +65,8 @@
         \raisebox{-0.05\height}{\small{\faHome}}     \href {https://azimut.github.io/} {personal site}
       \end{tabular}
     \end{tabular}
-  \vspace{.25em}
-\end{center}
+  \vspace{.25in}
+\end{nscenter}
 }
 
 \usepackage{lastpage}
