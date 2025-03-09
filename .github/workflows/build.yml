@@ -5,16 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: xu-cheng/latex-action@v3
-        env:
+      - run: sudo apt-get install -y texlive-base texlive-fonts-extra texlive-latex-extra texlive-latex-recommended texlive-lang-spanish
+      - env:
           MAILTO: ${{ secrets.MAILTO }}
           FULLNAME: ${{ secrets.FULLNAME }}
           LINKEDIN: ${{ secrets.LINKEDIN }}
-        with:
-          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-          root_file: |
-            CV.tex
-            CV_es.tex
+        run: make
 
       - name: Move .pdf to public/
         env:
