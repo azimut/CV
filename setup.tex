@@ -8,6 +8,7 @@
 }
 \urlstyle{same}
 
+\usepackage{qrcode}
 \usepackage{setspace}
 \usepackage[spanish,english]{babel}
 \usepackage{multicol}
@@ -39,16 +40,24 @@
 \getenv[\LINKEDIN]{LINKEDIN}
 
 \renewcommand{\maketitle}[1]{
-  \begin{center}
-    {\Huge\bfseries\theauthor} \\
-    \vspace{.25em}
-    \raisebox{-0.10\height}{\small{\faEnvelope}} \href {mailto:\MAILTO} {\expandafter\randomize\expandafter{\MAILTO}} $\cdot$
-    \raisebox{-0.05\height}{\small{\faGithub}}   \href {https://github.com/azimut} {azimut} $\cdot$
-    \raisebox{-0.05\height}{\small{\faLinkedin}} \href {https://www.linkedin.com/in/\LINKEDIN} {\LINKEDIN} $\cdot$
-    \raisebox{-0.05\height}{\small{\faHome}}     \href {https://azimut.github.io/} {personal site} \\
-    \vspace{.25em}
-    #1
-  \end{center}
+\begin{center}
+    \begin{tabular}{ r | c | r }
+      \qrcode{https://azimut.github.io/CV/}
+      &
+      \begin{tabular}{ c }
+        {\Huge\bfseries\theauthor} \\
+        #1n
+      \end{tabular}
+      &
+      \begin{tabular}{@{}l@{}}
+        \raisebox{-0.10\height}{\small{\faEnvelope}} \href {mailto:\MAILTO} {\expandafter\randomize\expandafter{\MAILTO}} \\
+        \raisebox{-0.05\height}{\small{\faGithub}}   \href {https://github.com/azimut} {azimut} \\
+        \raisebox{-0.05\height}{\small{\faLinkedin}} \href {https://www.linkedin.com/in/\LINKEDIN} {\LINKEDIN} \\
+        \raisebox{-0.05\height}{\small{\faHome}}     \href {https://azimut.github.io/} {personal site}
+      \end{tabular}
+    \end{tabular}
+  \vspace{.25em}
+\end{center}
 }
 
 \usepackage{lastpage}
