@@ -11,7 +11,6 @@ jobs:
           FULLNAME: ${{ secrets.FULLNAME }}
           LINKEDIN: ${{ secrets.LINKEDIN }}
         with:
-          pre_compile: "tlmgr install geometry hyperref titlesec titling fontawesome lastpage fancyhdr randtext multirow makecell babel-spanish"
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
           root_file: |
             CV.tex
