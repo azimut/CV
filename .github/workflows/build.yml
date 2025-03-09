@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: install OS dependencies
-        run: sudo apt-get install -y texlive-base texlive-fonts-extra texlive-latex-extra texlive-latex-recommended texlive-lang-spanish poppler-utils
+        run: sudo apt-get install -y texlive-base texlive-fonts-extra texlive-latex-extra texlive-latex-recommended texlive-lang-spanish poppler-utils imagemagick
       - env:
           MAILTO: ${{ secrets.MAILTO }}
           FULLNAME: ${{ secrets.FULLNAME }}
@@ -22,6 +22,8 @@ jobs:
           sed -i 's/FILENAME_SPANISH/'"${FILENAME_SPANISH}"'/' public/index.html
           cp -v CV.pdf    public/${FILENAME_ENGLISH}
           cp -v CV_es.pdf public/${FILENAME_SPANISH}
+          cp -v CV.png    public/english.png
+          cp -v CV_es.png public/spanish.png
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
