@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: sudo apt-get install -y texlive-base texlive-fonts-extra texlive-latex-extra texlive-latex-recommended texlive-lang-spanish
+      - name: install OS dependencies
+        run: sudo apt-get install -y texlive-base texlive-fonts-extra texlive-latex-extra texlive-latex-recommended texlive-lang-spanish poppler-utils
       - env:
           MAILTO: ${{ secrets.MAILTO }}
           FULLNAME: ${{ secrets.FULLNAME }}
