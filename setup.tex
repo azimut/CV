@@ -48,7 +48,7 @@
  {\parskip=0pt\par\nopagebreak\centering}
  {\par\noindent\ignorespacesafterend}
 
-\renewcommand{\maketitle}[1]{
+\renewcommand{\maketitle}[2]{
   \begin{nscenter}
     \begin{tabular}{ r | c | r }
       \qrcode{https://azimut.github.io/CV/}
@@ -58,14 +58,15 @@
         #1
       \end{tabular}
       &
-      \begin{tabular}{@{}l@{}}
-        \raisebox{-0.10\height}{\small{\faEnvelope}} \href {mailto:\MAILTO} {\expandafter\randomize\expandafter{\MAILTO}} \\
-        \raisebox{-0.05\height}{\small{\faGithub}}   \href {https://github.com/azimut} {azimut} \\
-        \raisebox{-0.05\height}{\small{\faLinkedin}} \href {https://www.linkedin.com/in/\LINKEDIN} {\LINKEDIN} \\
-        \raisebox{-0.05\height}{\small{\faHome}}     \href {https://azimut.github.io/} {personal site}
+      \setlength{\tabcolsep}{3pt}
+      \begin{tabular}{ c l }
+        \raisebox{-0.10\height}{\small{\faEnvelope}} & \href {mailto:\MAILTO}                        {\expandafter\randomize\expandafter{\MAILTO}} \\
+        \raisebox{-0.05\height}{\small{\faGithub}}   & \href {https://github.com/azimut}             {azimut} \\
+        \raisebox{-0.05\height}{\small{\faLinkedin}} & \href {https://www.linkedin.com/in/\LINKEDIN} {\LINKEDIN} \\
+        \raisebox{-0.05\height}{\small{\faHome}}     & \href {https://azimut.github.io/}             {#2}
       \end{tabular}
     \end{tabular}
-    \vspace{.25in}
+    \vspace{.1in}
   \end{nscenter}
 }
 
