@@ -1,6 +1,6 @@
 # CV
 
-CV in generated with LaTeX generated.
+PDF generated with [LaTeX](https://www.latex-project.org/). Converted to PNG with [ImageMagick](https://imagemagick.org/index.php). And build through [Github Actions](https://github.com/features/actions).
 
 <p float="left" align="middle">
   <a href="https://azimut.github.io/CV/english.png">
