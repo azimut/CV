@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: apt-get install -y texlive-base texlive-fonts-extra texlive-pictures texlive-latex-extra texlive-latex-recommended
+      - run: sudo apt-get install -y texlive-base texlive-fonts-extra texlive-pictures texlive-latex-extra texlive-latex-recommended
       - env:
           MAILTO: ${{ secrets.MAILTO }}
           FULLNAME: ${{ secrets.FULLNAME }}
