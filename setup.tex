@@ -5,14 +5,6 @@
   bottom = 0.5in
 ]{geometry}
 
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks = true,
-  linkcolor  = blue,
-  urlcolor   = blue
-}
-\urlstyle{same}
-
 \usepackage{qrcode}
 \usepackage{setspace}
 \usepackage[spanish,english]{babel}
@@ -43,6 +35,17 @@
 \getenv[\MAILTO]{MAILTO}
 \getenv[\FULLNAME]{FULLNAME}
 \getenv[\LINKEDIN]{LINKEDIN}
+
+\usepackage{hyperref}
+\hypersetup{
+  pdfauthor   = {\FULLNAME},
+  pdfsubject  = {Resume},
+  pdfkeywords = {lisp} {emacs} {sysadmin} {devops},
+  colorlinks  = true,
+  linkcolor   = blue,
+  urlcolor    = blue
+}
+\urlstyle{same}
 
 \newenvironment{nscenter}
  {\parskip=0pt\par\nopagebreak\centering}
