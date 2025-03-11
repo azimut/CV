@@ -51,7 +51,11 @@
 \renewcommand{\maketitle}[2]{
   \begin{nscenter}
     \begin{tabular}{ r c | r }
-      \qrcode{https://azimut.github.io/CV/}
+      \begingroup
+        \hypersetup{hidelinks}
+        \qrset{tight}
+        \qrcode{https://azimut.github.io/CV/}
+      \endgroup
       &
       \begin{tabular}{ c }
         {\Huge\bfseries\theauthor} \\
